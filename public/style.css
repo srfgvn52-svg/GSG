@@ -1,0 +1,181 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('galatasaray-yayin-geliri-scaled.jpg') no-repeat center center fixed, linear-gradient(135deg, #ffcc00, #e94e77);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%;
+    max-width: 600px;
+}
+
+header {
+    background: #b71c1c; /* Darker red */
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.game-board div {
+    background: #fff8e1;
+    border: 2px solid #e94e77;
+    border-radius: 8px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.game-board div:hover {
+    background: #ffe082;
+    transform: scale(1.05);
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px;
+    background: #ffcc00; /* Yellow */
+    border-top: 1px solid #b71c1c;
+}
+
+.score {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.score.blue {
+    color: #b71c1c; /* Darker red for blue team text */
+}
+
+.score.red {
+    color: #b71c1c; /* Darker red */
+}
+
+.score.yellow {
+    color: #b71c1c; /* Dark red for Sarı Takım */
+}
+
+footer {
+    background: #ffcc00; /* Yellow background */
+    color: #b71c1c;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.team-names {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.team-names input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.team-names input:focus {
+    border-color: #4a90e2;
+}
+
+.team-names button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #b71c1c; /* Darker red */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.team-names button:hover {
+    background-color: #e94e77;
+}
+
+#explosion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: explosion-animation 1s ease-out;
+    flex-direction: column;
+}
+
+#explosion p {
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#explosion button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #e94e77;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#explosion button:hover {
+    background-color: #d43b63;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes explosion-animation {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
