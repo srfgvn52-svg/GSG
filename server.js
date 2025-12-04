@@ -5,7 +5,7 @@ const app = express();
 const PORT = 3000;
 
 // Statik dosyaları sun
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/')));
 
 // Sunucuyu başlat
 app.listen(PORT, () => {
