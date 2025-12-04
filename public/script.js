@@ -34,6 +34,7 @@ closeExplosionButton.addEventListener('click', () => {
     currentPlayer = 'yellow';
     createBoard();
 });
+ 
 
 function createBoard() {
     gameBoard.innerHTML = '';
